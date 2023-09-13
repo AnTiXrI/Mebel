@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "graceful-fs": "^4.2.11",
-    "npm-force-resolutions": "^0.0.10",
-    "rateyo": "^3.0.0-alpha.2"
+    "npm-force-resolutions": "^0.0.10"
+    
   }
 }
