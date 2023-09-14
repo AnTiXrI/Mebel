@@ -185,3 +185,91 @@
     }
 
 }
+
+//end header
+
+//Start categories
+
+.categories {
+    padding-top: 100px;
+    position: relative;
+
+    &_inner {
+        display: flex;
+        justify-content: space-evenly;
+        height: 80px;
+        align-items: center;
+        overflow: hidden;
+
+        &--left ul,
+        &--right ul {
+            display: flex;
+        }
+        &--left ul li,
+        &--right ul li{
+            padding: 0 14px;
+            height: 80px;
+        }
+
+        &--left ul li a,
+        &--right ul li a{
+            transform: matrix(1, 0, 0, 1, 25) !important;
+            transition: all 0.4s;
+        }
+
+        &--left ul li a:hover,
+        &--right ul li a:hover{
+            @include f600;
+        }
+
+        & ul li a {
+            position: relative;
+        }
+
+        &-submenu.categories_submenu {
+            background-color: $peach;
+            position: absolute;
+            left:0;
+            top: 180px;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            transition: all 0.5s;
+            z-index: 1;
+        }
+
+        &-submenu .categories_submenu-items {
+            display: flex;
+            align-self: center;
+            margin-left: 20.6%;
+        }
+
+        &-submenu .categories_submenu-items .categories_submenu-item {
+            padding-right: 60px;
+            position: relative;
+        }
+        &-submenu .categories_submenu-items .categories_submenu-item::before {
+            content: '';
+            position:absolute;
+            top: 10px;
+            right:20px;
+            border: 2px solid $black;
+            background-color: $black;
+            border-radius: 50%;
+        }
+
+        &-submenu .categories_submenu-items .categories_submenu-item:last-child::before {
+            border: none;
+        }
+
+        &-submenu .categories_submenu-items:hover {
+            @include f600;
+        }
+
+    }
+}
+.categories_inner .categories_menu-list li:hover .categories_inner-submenu.categories_submenu {
+    height: 120px;
+}
+
+//End categories
