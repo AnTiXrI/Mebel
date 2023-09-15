@@ -10,11 +10,11 @@
       "license": "ISC",
       "dependencies": {
         "graceful-fs": "^4.2.11",
-        "npm-force-resolutions": "^0.0.10",
-        "rateyo": "^3.0.0-alpha.2"
+        "npm-force-resolutions": "^0.0.10"
       },
       "devDependencies": {
         "browser-sync": "^2.29.3",
+        "cssmin": "^0.4.3",
         "del": "^6.1.1",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
@@ -1285,6 +1285,15 @@
       },
       "engines": {
         "node": ">= 0.10"
+      }
+    },
+    "node_modules/cssmin": {
+      "version": "0.4.3",
+      "resolved": "https://registry.npmjs.org/cssmin/-/cssmin-0.4.3.tgz",
+      "integrity": "sha512-A0hOtBUV5dPB/gRKsLZsqoyeFHuKIWCXdumFdsK/0nlhwK1NRZHwtm0svdTA4uEpixZD+o0xs7MirNsG2X1JBg==",
+      "dev": true,
+      "bin": {
+        "cssmin": "bin/cssmin"
       }
     },
     "node_modules/currently-unhandled": {
@@ -5703,15 +5712,6 @@
       "dev": true,
       "engines": {
         "node": ">= 0.6"
-      }
-    },
-    "node_modules/rateyo": {
-      "version": "3.0.0-alpha.2",
-      "resolved": "https://registry.npmjs.org/rateyo/-/rateyo-3.0.0-alpha.2.tgz",
-      "integrity": "sha512-2SQnLpo0j1aWa5na28mpPjT73YNpt7Z58W5MqahqTAs0KmPdbjlbrFctDHd2NyaZfBiQoRFpK92ZzOm4NX92SQ==",
-      "engines": {
-        "node": ">=10.16.2",
-        "npm": ">=4.0.0"
       }
     },
     "node_modules/raw-body": {
