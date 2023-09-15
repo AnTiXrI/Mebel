@@ -18,5 +18,12 @@ window.addEventListener("scroll",function(){
     const header = this.document.querySelector(".header_top-inner");
     header.classList.toggle("sticky",window.scrollY>0)
 })
-
+//slider
+$('.slider_inner').slick({
+    dots:true,
+    arrows:false,
+    slidesToShow:1,
+    slidesToScroll:1,
+    autoplay:true
+})
 });
