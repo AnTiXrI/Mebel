@@ -398,3 +398,183 @@
 }
 
 //End Slider
+
+//Start sales-leaders
+
+.sales-leaders {
+    padding: 100px 0;
+    &_title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &_subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &_items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    &_inner {
+        padding: 30px;
+        transition: all 0.3s;
+
+        & .sales-leaders_hidden {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    }
+
+    &_discount {
+        text-align: right;
+        position: relative;
+        z-index: 1;
+        & span {
+            @include f600;
+            padding-left: 10px;
+            z-index: 100;
+        }
+
+        &-square {
+            position: absolute;
+            top: -18px;
+            right: -10px;
+            width: 54px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+
+            & span:nth-child(1) {
+                width: 100%;
+                height: 100%;
+                border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+                transition: all 0.5s;
+                animation: animate 6s linear infinite;
+                background-color: $peach;
+            }
+        }
+    }
+    &_description,
+    &_price {
+        text-align: center;
+    }
+
+    &_description {
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 263px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    &_price {
+        display: flex;
+        justify-content: center;
+
+        &-new {
+            @include f600;
+            padding-right: 25px;
+        }
+
+        &-old {
+            text-decoration: line-through;
+        }
+    }
+
+    &_bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 22px 25px 0px;
+
+       & .botton-buy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 14px 7px 0px;
+            border: none;
+            border-radius: 60px;
+            background-color: rgba(172, 159, 147, 0.267);
+            box-shadow: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            outline: none;
+        }
+
+        & .botton-buy:hover {
+            background-color: $peach;
+        }
+    }
+
+    &_text {
+        font-size: 14px;
+        @include f600;
+        margin-left: 28px;
+        margin-right: 10px;
+    }
+
+    &_icon {
+        border-radius: 50%;
+        position: relative;
+        margin-left: 10px;
+    }
+
+    &_icon::before {
+        font-size: 20px;
+        padding: 5px;
+        background-color: $white;
+        border-radius: 50%;
+    }
+
+    &_inner:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+
+        & .sales-leaders_hidden {
+            opacity: 1;
+        }
+    }
+
+    &_buy {
+        font-size: 14px;
+        margin-left: 30px;
+        text-align: center;
+        color: darkgray;
+        cursor: pointer;
+        transition: color 0.3s border 0.3s ease;
+        position: relative;
+    }
+    &_buy:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $underline;
+    }
+
+    &_buy:hover {
+        color: $text;
+    }
+
+    &_buy:hover::before {
+        background-color: $text;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+//End sales-leaders
