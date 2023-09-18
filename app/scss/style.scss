@@ -827,5 +827,109 @@
 }
 //End collections
 
-// Start new-items
+// Start projects
+
+.projects {
+    padding: 100px 0;
+
+    &_title {
+        margin-bottom: 20px;
+    }
+
+    &_subtitle {
+        margin-bottom: 30px;
+    }
+
+    &_goToProjects {
+        font-size: 14px;
+        line-height: 1.715;
+        @include f600;
+        transition: color 0.3s ease;
+        margin-bottom: 40px;
+    }
+
+    &_goToProjects:hover {
+    color: $hoverText;
+    }
+
+    &_cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &_card-inner {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &_card img{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 600px;
+        max-width: 860px;
+        transition: all 0.5s;
+    }
+
+    &_card img:hover {
+        transform: scale(1.1);
+    }
+
+    &_card-link {
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 700px;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: all 0.5s;
+    }
+
+    &_card-inner:hover .projects_card-link {
+        height: 167px;
+        padding: 45px 50px 40px;
+
+    }
+
+    &_card-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &_card-title {
+        font-size: 20px;
+        line-height: 1.6;
+        width: 100%;
+        margin-bottom: 22px;
+    }
+
+    &_card-descr {
+        color: $hoverText;
+        line-height: 1.75;
+
+    }
+
+    &_card-details {
+        font-size: 14px;
+        line-height: 1.715;
+        @include f600;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+
+    &_card-details:hover {
+        color: $hoverText;
+    }
+}
+
+// End projects
 
