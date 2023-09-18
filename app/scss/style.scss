@@ -401,7 +401,8 @@
 
 //Start sales-leaders
 
-.sales-leaders {
+.sales-leaders,
+.new-items {
     padding: 100px 0;
     &_title {
         text-align: center;
@@ -423,6 +424,11 @@
         transition: all 0.3s;
 
         & .sales-leaders_hidden {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        & .new-items_hidden {
             opacity: 0;
             transition: all 0.3s;
         }
@@ -539,6 +545,11 @@
         & .sales-leaders_hidden {
             opacity: 1;
         }
+
+        & .new-items_hidden {
+            opacity: 1;
+        }
+        
     }
 
     &_buy {
@@ -568,7 +579,8 @@
         background-color: $text;
     }
 
-    &_loadMore {
+    &_loadMore,
+    &_newItemsLoadMore {
         font-size: 14px;
         line-height: 1.715;
         @include f600;
@@ -583,7 +595,8 @@
         transition: all 0.3s;
         cursor: pointer;
     }
-    &_loadMore::after {
+    &_loadMore::after,
+    &_newItemsLoadMore::after {
     content:'+';
     position: absolute;
     padding-left: 8px;
@@ -592,7 +605,8 @@
     transform: translateY(-50%);
     }
 
-    &_loadMore:hover {
+    &_loadMore:hover,
+    &_newItemsLoadMore:hover {
         border: 1px solid $text;
     }
 }
@@ -601,6 +615,11 @@
 #boxs .box:nth-child(n + 4) {
     display: none;
 }
+
+#newBoxs .newBox:nth-child(n + 4) {
+    display: none;
+}
+
 @keyframes animate {
     0% {
         transform: rotate(0deg);
@@ -609,12 +628,13 @@
         transform: rotate(360deg);
     }
 }
+
 //End sales-leaders
 
 // Start collections
 
 .collections {
-    padding-bottom: 150px;
+
 
     &_mainTitle {
         margin-bottom: 20px;
@@ -806,3 +826,6 @@
     font-family: 'icomoon';
 }
 //End collections
+
+// Start new-items
+
