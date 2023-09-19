@@ -19,6 +19,10 @@
     background-color: $header-top-bg;
     }
 
+    &_top.off {
+        z-index: 3;
+    }
+
     &_top-inner{
     display: flex;
     justify-content: space-between;
@@ -465,6 +469,11 @@
             }
         }
     }
+
+    &_discount.off {
+        z-index: 0;
+    }
+
     &_description,
     &_price {
         text-align: center;
@@ -801,6 +810,9 @@
     background-color: transparent;
     outline: none;
 }
+.slick-arrow.off {
+    z-index: 0;
+}
 
 .slick-prev {
 
@@ -1006,3 +1018,117 @@
 }
 
 // End footer
+
+// Star hamburger
+
+.hamburger {
+    position: relative;
+    right: 50%;
+    top: 2px;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    transform: translateX(50%);
+
+    &.on {
+        top:10px;
+    }
+
+    & .hamburger_span {
+        height: 2px;
+        background: $text;
+        transition: all 0.3s ease-out;
+        backface-visibility: hidden;
+        margin: 2px auto;
+
+    }
+
+    &.on #one {
+        transform: rotate(45deg) translateX(-4px) translateY(-2px);
+    }
+    &.on #two {
+        opacity: 0;
+    }
+    &.on #three {
+        transform: rotate(-45deg) translateX(7px) translateY(-10px);
+    }
+
+}
+
+//End hamburger
+
+// Start sidebar
+
+.menu {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    opacity: 0;
+}
+
+.close-menu {
+    position: fixed;
+    margin: 1em;
+    font-size: 24px;
+    color: $white;
+    z-index: 1;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    margin-top: 8%;
+    width: 100%;
+}
+
+.main-menu-item {
+    padding: 15px 30px;
+    background-color: rgba(237,235,233, .5);
+    border-bottom: 1px solid $underline;
+
+    &.sidebar_title {
+        background-color: $white;
+        @include f600;
+    }
+
+    & a {
+        color: $text;
+        font-weight: lighter;
+    }
+}
+
+.submenu-item a {
+    color: $hoverText;
+}
+
+.sidebar_submenu li {
+    margin: 20px 0px;
+}
+
+a ion-icon {
+    position: relative;
+    font-size: 9px;
+    opacity: 0.4;
+}
+
+.sidebar_submenu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .nav {
+        margin-top: 20%;
+    }
+}
+//End sidebar
+
+@import '_media';
